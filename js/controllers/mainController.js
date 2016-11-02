@@ -86,6 +86,7 @@ angular
       cart.add(item);
       this.itemCount = cart.itemCount(); 
       this.cartTotal = cart.total();
+      console.log(this.discount);
     }
 
     this.removeFromCart = function(item){
@@ -95,6 +96,7 @@ angular
       this.cartTotal = cart.total();
       if(this.itemCount > 0){
         this.itemCount --;
+        console.log(this.discount);
       }
     }
 
@@ -146,5 +148,4 @@ angular
       this.discount  = 0
       // this.quantity = cart.stock();
     }
-    console.log(this.discount);
   }
