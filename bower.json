@@ -1,0 +1,17 @@
+{
+  "name": "clothingRetailer",
+  "authors": [
+    "Acacia Mack <acacialmack@gmail.com>"
+  ],
+  "description": "Deloitte Frontend Test",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="clothingRetailer">
+<head>
+  <meta charset="utf8">
+  <title>Clothing Retailer</title>
+
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="js/controllers/mainController.js"></script>
+  <script type="text/javascript" src="js/services/cart.js"></script>
+</head>
+<body>
+
+  <main ng-controller="MainController as main">
+    <div class="cart">
+      Item Count: {{ main.itemCount }}<br>
+      Total: {{ main.cartTotal | currency: "£"}} <button ng-click="main.clearCart()">Empty Basket</button><br>
+    </div>
+
+    <ul class="items">
+      <li ng-repeat="item in main.items">
+        {{ item.name }} {{ item.price | currency: "£" }} {{item.quantity}}
+        <button ng-click="main.addToCart(item)">Add To Cart</button>
+        <button ng-click="main.removeFromCart(item)">Remove From Cart</button>
+      </li>
+    </ul>
+    <div>
+      Vouchers: <button ng-click="main.discount5()">£5 off order</button> <button ng-click="main.discount10()">£10 off over £50</button> <button ng-click="main.discount15()">£15 off over £75</button> 
+    </div>
+    
+  </main>
+</body>
+</html>
