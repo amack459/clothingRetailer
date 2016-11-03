@@ -25,14 +25,45 @@
       Total: {{ main.cartTotal | currency: "£"}}<br> <button id="clear" ng-click="main.clearCart()">Empty Cart</button><br>
     </div>
 
-    <ul class="items">
+  <div class="container">
+    <div class="card items row">
+      <div class="card-block col-xs-4" ng-repeat="item in main.items">
+        <h4 class="card-title">{{ item.name }} </h4>
+      <img src="..." alt="Card image">
+        <h6 class="card-subtitle text-muted">{{item.category}} | quantity: {{item.quantity}}</h6>
+      <div class="card-block">
+        <p class="card-text">{{ item.price | currency: "£" }}</p>
+        <button  ng-click="main.addToCart(item)"> Add to Cart </button>
+        <button  ng-click="main.removeFromCart(item)"> Remove from Cart </button>
+       <!--  <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!--     <div class="card-deck-wrapper">
+      <div class="card-deck" ng-repeat="item in main.items">
+      <div class="card" >
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">{{ item.name }} </h4>
+            <p class="card-text">{{ item.price | currency: "£" }}</p>
+            <p class="card-text"><small class="text-muted"></small>{{item.quantity}} available</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+ <!--    <ul class="items">
       <li ng-repeat="item in main.items">
         {{ item.name }} {{ item.price | currency: "£" }} {{item.category}} {{item.quantity}}
-        <button ng-click="main.addToCart(item)">Add To Cart</button>
-        <button ng-click="main.removeFromCart(item)">Remove From Cart</button>
+        <button ng-click="main.addToCart(item)"> Add to Cart </button>
+        <button ng-click="main.removeFromCart(item)"> Remove from Cart </button>
       </li>
     </ul>
-
+ -->
     <footer>
       Vouchers: <button ng-click="main.discount5()">£5 off order</button> <button ng-click="main.discount10()">£10 off over £50</button> <button ng-click="main.discount15()">£15 off over £75</button> 
     </footer>
