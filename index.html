@@ -16,25 +16,28 @@
 </head>
 <body>
 
-  <h2>Shop Til' You Drop</h2>
-
   <main ng-controller="MainController as main">
 
-    <div class="cart">
-      <i class="fa fa-shopping-basket" aria-hidden="true"></i> {{ main.itemCount }}<br>
-      Total: {{ main.cartTotal | currency: "£"}}<br> <button id="clear" ng-click="main.clearCart()">Empty Cart</button><br>
-    </div>
+    <header>
+      <h2>Shop Til' You Drop</h2>
+      <div class="cart">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i> {{ main.itemCount }}<br>
+        Total: {{ main.cartTotal | currency: "£"}}<br> <button id="clear" ng-click="main.clearCart()">Empty Cart</button><br>
+      </div>
+    </header>
+  
 
   <div class="container">
     <div class="card items row">
       <div class="card-block col-md-4" ng-repeat="item in main.items">
         <h4 class="card-title">{{ item.name }} </h4>
-      <img src="{{item.image}}" alt="Card image">
+        <h5 class="card-subtitle color">{{ item.color }} </h5>
+      <img ng-src="{{item.image}}" alt="Card image">
         <h6 class="card-subtitle text-muted">{{item.category}} | quantity: {{item.quantity}}</h6>
       <div class="card-block">
         <p class="card-text">{{ item.price | currency: "£" }}</p>
-        <button  ng-click="main.addToCart(item)"> Add to Cart </button>
-        <button  ng-click="main.removeFromCart(item)"> Remove from Cart </button>
+        <button  ng-click="main.addToCart(item)"><i class="fa fa-plus" aria-hidden="true"></i><br><span id="left">Add</span></button>
+        <button  ng-click="main.removeFromCart(item)"><i class="fa fa-minus fa-1x" aria-hidden="true"></i><br><span id="right">Remove</span></button>
        <!--  <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a> -->
         </div>

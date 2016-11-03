@@ -7,79 +7,92 @@ angular
   function MainController(cart){
     this.items = [{
 
-      name: "Almond Toe Court Shoe, Patent Black",
+      name: "Almond Toe Court Shoe",
+      color: "Patent Black",
       category: "Women's Footwear",
       price: 99.00, 
       image: "http://g01.a.alicdn.com/kf/HTB105EGKpXXXXXQaXXXq6xXFXXX6/Plus-Size-Eu34-47-Women-Spring-New-Almond-Toe-Classic-Heels-Court-Shoes-Ladies-Shiny-Patent.jpg",
       quantity: 5
     },{
-      name: "Suede Shoes, Blue",
+      name: "Suede Shoes",
+      color: "Blue",
       category: "Women's Footwear",
       price: 42.00,
       image: "css/photos/blueSuedeShoe.jpg", 
       quantity: 4  
     },{
-      name: "Leather Driver Saddle Loafers, Tan",
+      name: "Leather Driver Saddle Loafers",
+      color: "Tan",
       category: "Men's Footwear",
       price: 34.00, 
       image: "css/photos/tanShoe.jpeg",
       quantity: 12
     },{
-      name: "Flip Flops, Red",
+      name: "Flip Flops",
+      color: "Red",
       category: "Men's Footwear",
       price: 19.00, 
       image: "css/photos/flipFlopRed.jpg",
       quantity: 6
     },{
-      name: "Flip Flops, Blue",
+      name: "Flip Flops",
+      color: "Blue",
       category: "Men's Footwear",
       price: 19.00,
       image: "css/photos/flipFlopBlue.jpg", 
       quantity: 0
     },{
-      name: "Gold Button Cardigan, Black",
+      name: "Gold Button Cardigan",
+      color: "Black",
       category: "Women's Casualwear",
       price: 167.00, 
       image: "css/photos/goldButton.jpeg",
       quantity: 6
     },{
-      name: "Cotton Shorts, Medium Red",
+      name: "Cotton Shorts",
+      color: "Medium Red",
       category: "Women's Casualwear",
       price: 30.00,
       image: "css/photos/cottonShorts.jpg", 
       quantity: 5
     },{
-      name: "Fine Stripe Short Sleeve Shirt, Grey",
+      name: "Fine Stripe Short Sleeve Shirt",
+      color: "Grey",
       category: "Men's Casualwear",
       price: 49.99,
       image: "css/photos/stripeShirtGrey.jpg",
       quantity: 9
     },{
-      name: "Fine Stripe Short Sleeve Shirt, Green",
+      name: "Fine Stripe Short Sleeve Shirt",
+      color: "Green",
       category: "Men's Casualwear",
       price: 49.99,
       image: "css/photos/stripeShirtGreen.jpg", 
       quantity: 3
     },{
-      name: "Sharkskin Waistcoat, Charcoal",
+      name: "Sharkskin Waistcoat",
+      color: "Charcoal",
       category: "Men's Formalwear",
       price: 75.00,
       image: "css/photos/sharkskin.jpg", 
       quantity: 2
     },{
-      name: "Lightweight Patch Pocket Blazer, Deer",
+      name: "Lightweight Patch Pocket Blazer",
+      color: "Deer",
       category: "Men's Formalwear",
       price: 175.50,
       image: "css/photos/patchPocket.jpeg", 
       quantity: 1
     },{
-      name: "Bird Print Dress, Black",
+      name: "Bird Print Dress",
+      color: "Black",
       category: "Women's Formalwear",
       price: 270.00,
       image: "css/photos/birds.jpeg",
       quantity: 10
     },{
-      name: "Mid Twist Cut-Out Dress, Pink",
+      name: "Mid Twist Cut-Out Dress",
+      color: "Pink",
       category: "Women's Casualwear",
       price: 540.00, 
       image: "css/photos/cutOut.jpg",
