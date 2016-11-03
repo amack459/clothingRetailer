@@ -10,67 +10,79 @@ angular
       name: "Almond Toe Court Shoe, Patent Black",
       category: "Women's Footwear",
       price: 99.00, 
+      image: "http://g01.a.alicdn.com/kf/HTB105EGKpXXXXXQaXXXq6xXFXXX6/Plus-Size-Eu34-47-Women-Spring-New-Almond-Toe-Classic-Heels-Court-Shoes-Ladies-Shiny-Patent.jpg",
       quantity: 5
     },{
       name: "Suede Shoes, Blue",
       category: "Women's Footwear",
-      price: 42.00, 
+      price: 42.00,
+      image: "css/photos/blueSuedeShoe.jpg", 
       quantity: 4  
     },{
       name: "Leather Driver Saddle Loafers, Tan",
       category: "Men's Footwear",
       price: 34.00, 
+      image: "css/photos/tanShoe.jpeg",
       quantity: 12
     },{
       name: "Flip Flops, Red",
       category: "Men's Footwear",
       price: 19.00, 
+      image: "css/photos/flipFlopRed.jpg",
       quantity: 6
     },{
-      name: "Flip Flops, Red",
+      name: "Flip Flops, Blue",
       category: "Men's Footwear",
-      price: 19.00, 
+      price: 19.00,
+      image: "css/photos/flipFlopBlue.jpg", 
       quantity: 0
     },{
       name: "Gold Button Cardigan, Black",
       category: "Women's Casualwear",
       price: 167.00, 
+      image: "css/photos/goldButton.jpeg",
       quantity: 6
     },{
       name: "Cotton Shorts, Medium Red",
       category: "Women's Casualwear",
-      price: 30.00, 
+      price: 30.00,
+      image: "css/photos/cottonShorts.jpg", 
       quantity: 5
     },{
       name: "Fine Stripe Short Sleeve Shirt, Grey",
       category: "Men's Casualwear",
-      price: 49.99, 
+      price: 49.99,
+      image: "css/photos/stripeShirtGrey.jpg",
       quantity: 9
     },{
       name: "Fine Stripe Short Sleeve Shirt, Green",
       category: "Men's Casualwear",
       price: 49.99,
-      sale: 39.99, 
+      image: "css/photos/stripeShirtGreen.jpg", 
       quantity: 3
     },{
       name: "Sharkskin Waistcoat, Charcoal",
       category: "Men's Formalwear",
-      price: 75.00, 
+      price: 75.00,
+      image: "css/photos/sharkskin.jpg", 
       quantity: 2
     },{
-      name: "Lightweigth Patch Pocket Blazer, Deer",
+      name: "Lightweight Patch Pocket Blazer, Deer",
       category: "Men's Formalwear",
-      price: 175.50, 
+      price: 175.50,
+      image: "css/photos/patchPocket.jpeg", 
       quantity: 1
     },{
       name: "Bird Print Dress, Black",
       category: "Women's Formalwear",
-      price: 270.00, 
+      price: 270.00,
+      image: "css/photos/birds.jpeg",
       quantity: 10
     },{
       name: "Mid Twist Cut-Out Dress, Pink",
       category: "Women's Casualwear",
       price: 540.00, 
+      image: "css/photos/cutOut.jpg",
       quantity: 5
     }];
 

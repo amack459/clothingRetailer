@@ -1,17 +1,33 @@
 body {
-  background-color: pink;
+/*  background-color: pink;*/
   margin: 0 auto;
 }
 
 h2 {
   float: left;
 }
+
 .fa{
   font-size: 18px;
 }
+
 div.cart {
   float: right;
   margin-top: 20px;
+}
+
+div.card-block{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+h4.card-title{
+  height: 50px;
+}
+
+img{
+  width: 293px;
+  height: 293px;
 }
 
 .items {
@@ -24,7 +40,9 @@ button {
   padding: 0px 0px;
 }
 
-
+div.card {
+  text-align: center;
+}
 
 ul{
   list-style: none;

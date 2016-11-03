@@ -27,9 +27,9 @@
 
   <div class="container">
     <div class="card items row">
-      <div class="card-block col-xs-4" ng-repeat="item in main.items">
+      <div class="card-block col-md-4" ng-repeat="item in main.items">
         <h4 class="card-title">{{ item.name }} </h4>
-      <img src="..." alt="Card image">
+      <img src="{{item.image}}" alt="Card image">
         <h6 class="card-subtitle text-muted">{{item.category}} | quantity: {{item.quantity}}</h6>
       <div class="card-block">
         <p class="card-text">{{ item.price | currency: "£" }}</p>
