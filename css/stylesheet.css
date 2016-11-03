@@ -1,12 +1,14 @@
-/*html {
-  height: 100%;
+html {
+
+/*  height: 100%;
   overflow: hidden;
-  width: 100%;
-}*/
+  width: 100%;*/
+}
 
 body {
 /*  background-color: pink;*/
   margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
 }
 
 header{
@@ -16,6 +18,7 @@ header{
  /* margin-bottom: 30px;*/
   z-index: 1;
   position: fixed;
+  font-weight: bold;
 }
 
 
@@ -47,10 +50,12 @@ div.cart {
 div.card-block{
   padding-bottom: 30px;
   padding-top: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h4.card-title{
   height: 50px;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 h5.card-subtitle.color {
@@ -80,6 +85,7 @@ button {
   border: none;
   background-color: transparent;
   padding: 0px 15px;
+  outline: none;
 }
 
 span#right {

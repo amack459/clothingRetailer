@@ -4,10 +4,11 @@
   <meta charset="utf8">
   <title>Clothing Retailer</title>
 
-  
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
 
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
@@ -33,7 +34,7 @@
         <h4 class="card-title">{{ item.name }} </h4>
         <h5 class="card-subtitle color">{{ item.color }} </h5>
       <img ng-src="{{item.image}}" alt="Card image">
-        <h6 class="card-subtitle text-muted">{{item.category}} | quantity: {{item.quantity}}</h6>
+        <h6 class="card-subtitle text-muted">{{item.category}} | Quantity: {{item.quantity}}</h6>
       <div class="card-block">
         <p class="card-text">{{ item.price | currency: "£" }}</p>
         <button  ng-click="main.addToCart(item)"><i class="fa fa-plus" aria-hidden="true"></i><br><span id="left">Add</span></button>

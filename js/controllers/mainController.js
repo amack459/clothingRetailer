@@ -101,7 +101,7 @@ angular
 
 
     this.quantity;
-    this.discount = 0;
+    discount = 0;
     this.itemCount = cart.itemCount();
     this.cartTotal = cart.total();
 
@@ -110,7 +110,6 @@ angular
       cart.add(item);
       this.itemCount = cart.itemCount(); 
       this.cartTotal = cart.total();
-      console.log(this.discount);
     }
 
     this.removeFromCart = function(item){
@@ -120,56 +119,54 @@ angular
       this.cartTotal = cart.total();
       if(this.itemCount > 0){
         this.itemCount --;
-        console.log(this.discount);
       }
     }
 
     this.discount5 = function(cartTotal){
-      this.discount ++;
-      if(this.discount == 1){
-        this.cartTotal = this.cartTotal - 5; 
-      }else{
-        alert("Sorry, vouchers can only be used once.");
+      
+      if(this.cartTotal >= 5 && discount === 0) {
+        discount ++;  
+        this.cartTotal = this.cartTotal - 5;
       } 
+
+      if(this.cartTotal < 5) {
+        alert("You must have an item in your cart.")
+      }
+
+      if(discount !== 0){
+        alert("Sorry, only one voucher per order.")
+      }
+       console.log(discount)
     }  
 
     this.discount10 = function(cartTotal){
-      if(this.discount == 0 && this.cartTotal > 50){
-        this.discount ++;
-        this.cartTotal = this.cartTotal - 10; 
-      }
-
-      if(this.discount > 0){
-        alert("Sorry, vouchers can only be used once.")
-      }
-
-      if(this.discount == 0 && this.cartTotal < 51){
-        alert("Your total must be over £50.");
-      }
+      console.log(discount)
+        if(this.cartTotal > 50 && discount === 0) {
+            this.cartTotal = this.cartTotal - 10;
+            discount ++;
+          }
+        if(this.cartTotal <= 50 && discount === 0) {
+          alert("Your total must be over £50.")
+        }
     }
 
     this.discount15 = function(cartTotal,cartItems){
-     console.log(cart);
+      console.log(discount)
+     if(this.cartTotal > 75 && discount === 0) {
+       this.cartTotal = this.cartTotal - 15;
+       discount ++;
+     } 
 
-     if(this.discount == 0 && this.cartTotal > 75){
-       this.discount ++;
-       this.cartTotal = this.cartTotal - 15; 
-     }
-
-     if(this.discount > 0){
-      alert("Sorry, vouchers can only be used once.")
-     }
-
-     if(this.discount == 0 && this.cartTotal < 76){
+     if (this.cartTotal <= 75 && discount === 0){
       alert("Your total must be over £75.")
-     }
+    }
     }
 
     this.clearCart = function(){
       cart.clear();
       this.itemCount = 0;
       this.cartTotal = 0;
-      this.discount  = 0
+      discount  = 0
       // this.quantity = cart.stock();
     }
   }
