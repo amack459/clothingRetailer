@@ -6,12 +6,11 @@ angular
 
   function MainController(cart){
     this.items = [{
-
       name: "Almond Toe Court Shoe",
       color: "Patent Black",
       category: "Women's Footwear",
       price: 99.00, 
-      image: "http://g01.a.alicdn.com/kf/HTB105EGKpXXXXXQaXXXq6xXFXXX6/Plus-Size-Eu34-47-Women-Spring-New-Almond-Toe-Classic-Heels-Court-Shoes-Ladies-Shiny-Patent.jpg",
+      image: "css/photos/blackShoe.jpeg",
       quantity: 5
     },{
       name: "Suede Shoes",
