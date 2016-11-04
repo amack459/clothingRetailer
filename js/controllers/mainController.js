@@ -149,13 +149,14 @@ angular
 
  function validate(item) {
   //regex to validate if there is footwear present
+  //function would be called on click instead of the discount15
   var code = /footwear/gi;
 
   for(var i = 0; i<cart.length; i++){
     var category = cart[i].category;
     category.test(code);
     if(category.test(code) === true){
-      this.discount15;
+      this.discount15();
     }else{
       alert("You must have at least 1 footwear item.")
     }
