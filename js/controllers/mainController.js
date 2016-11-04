@@ -141,7 +141,7 @@ angular
       discount ++; 
       this.cartTotal = this.cartTotal - 10;  
     } else if(this.cartTotal <= 50 && discount === 0){
-     alert("Your total mus be over £50.");
+     alert("Your total must be over £50.");
    } else {
      alert("Sorry, vouchers can only be used once.");
    }
@@ -172,6 +172,18 @@ angular
     } else {
       alert("Sorry, vouchers can only be used once.");
     }
+  }
+
+  this.checkOut = function(){
+    if(this.cartTotal > 0){
+      alert("Thank you for shopping with us!");
+      cart.clear();
+      this.itemCount = 0;
+      this.cartTotal = 0;
+      discount  = 0
+      
+    }
+
   }
 
     this.clearCart = function(){

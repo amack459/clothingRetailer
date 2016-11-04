@@ -23,7 +23,7 @@
       <h2>Shop Til' You Drop</h2>
       <div class="cart">
         <i class="fa fa-shopping-basket" aria-hidden="true"></i> {{ main.itemCount }}<br>
-        Total: {{ main.cartTotal | currency: "£"}}<br> <button id="clear" ng-click="main.clearCart()">Empty Cart</button><br>
+        Total: {{ main.cartTotal | currency: "£"}}<br> <button id="clear" ng-click="main.clearCart()">Empty Cart</button><br><button id="checkOut" ng-click="main.checkOut()">Check Out</button><br>
       </div>
     </header>
   
