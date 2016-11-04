@@ -181,7 +181,7 @@ angular
       this.itemCount = 0;
       this.cartTotal = 0;
       discount  = 0
-      
+
     }
 
   }

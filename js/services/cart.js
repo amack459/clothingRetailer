@@ -35,17 +35,8 @@ angular
         return cart.reduce(function (sum, cartItem) {
           return cartItem.price + sum;
         }, 0)
-      }, 
-      discount5: function () {
-       return cart.total -= 5;
-     },
-     discount10: function () {
-       return cart.total -= 10;
-     },
-     discount15: function () {
-       return cart.total -= 15;
-     }
+      }
+    }
   }
-}
 
 
