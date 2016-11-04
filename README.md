@@ -3,7 +3,7 @@
 
 
 
-This is a mock clothing retailer site built with Angular and Bootstrap. I used Bower to install Angular and Bootstrap. So, if there's a problem getting everything connected: 
+This is a mock clothing retailer site built with Angular and Bootstrap. I used Bower to install Angular and Bootstrap. So, if there's a problem getting everything connected (after you right click on the index.html to open in brower): 
     1. Go to the terminal 
     2.bower init 
     3.bower install angular 
