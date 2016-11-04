@@ -98,23 +98,29 @@ angular
       quantity: 5
     }];
 
+console.log(cart);
 
 
     this.quantity;
     discount = 0;
     this.itemCount = cart.itemCount();
     this.cartTotal = cart.total();
+    this.cartList  = cart.showCart();
 
     this.addToCart = function(item){
       //cart is in our 
       cart.add(item);
       this.itemCount = cart.itemCount(); 
       this.cartTotal = cart.total();
+      // this.cartList  = cart.itemList(); 
+      validate();
     }
 
     this.removeFromCart = function(item){
-    
+      console.log(this.cartList)
+
       console.log(cart.delete(item)); 
+      console.log(cart); 
       cart.delete(item); 
       this.cartTotal = cart.total();
       if(this.itemCount > 0){
@@ -122,45 +128,69 @@ angular
       }
     }
 
-    this.discount5 = function(cartTotal){
-      
-      if(this.cartTotal >= 5 && discount === 0) {
-        discount ++;  
-        this.cartTotal = this.cartTotal - 5;
-      } 
+    // function validate(item) {
+    //   return /(ahoj|ciao|czesc|h[ae]llo|hola|salut)/i.test(greetings)
+    // }
 
-      if(this.cartTotal < 5) {
-        alert("You must have an item in your cart.")
-      }
+ this.discount5 = function(cartTotal){
+     console.log("5 OFF");
+     if(this.cartTotal > 5 && discount === 0){
+       discount ++; 
+       this.cartTotal = this.cartTotal - 5;  
+     } else if(this.cartTotal < 5 && discount === 0){
+      alert("You must have an item in your cart.");
+     } else {
+      alert("Sorry, vouchers can only be used once.");
+     }
+ }  
 
-      if(discount !== 0){
-        alert("Sorry, only one voucher per order.")
-      }
-       console.log(discount)
-    }  
+ this.discount10 = function(cartTotal){
+  console.log("10 OFF");
+  if(this.cartTotal > 50 && discount === 0){
+    discount ++; 
+    this.cartTotal = this.cartTotal - 10;  
+  } else if(this.cartTotal <= 50 && discount === 0){
+   alert("Your total mus be over £50.");
+  } else {
+   alert("Sorry, vouchers can only be used once.");
+  }
+ }
 
-    this.discount10 = function(cartTotal){
-      console.log(discount)
-        if(this.cartTotal > 50 && discount === 0) {
-            this.cartTotal = this.cartTotal - 10;
-            discount ++;
-          }
-        if(this.cartTotal <= 50 && discount === 0) {
-          alert("Your total must be over £50.")
-        }
+ function validate(item) {
+  console.log(this.cartList);
+  // var code = /footwear/gi;
+
+  // for(var i = 0; i<cart.length; i++){
+  //   var category = cart[i].category;
+  //   console.log(category.test(code));
+  //   return category.test(code);
+  //   }
+  // }
+  //     if(category.match(code)){
+  //       return true;
+  //     } else {return false;
     }
 
-    this.discount15 = function(cartTotal,cartItems){
-      console.log(discount)
-     if(this.cartTotal > 75 && discount === 0) {
-       this.cartTotal = this.cartTotal - 15;
-       discount ++;
-     } 
 
-     if (this.cartTotal <= 75 && discount === 0){
-      alert("Your total must be over £75.")
-    }
-    }
+ //  if()
+
+ //    return /(ahoj|ciao|czesc|h[ae]llo|hola|salut)/i.test(greetings)
+
+
+ // }
+
+ this.discount15 = function(cartTotal){
+  console.log(cart);
+ console.log("15 OFF");
+ if(this.cartTotal > 75 && discount === 0){
+   discount ++; 
+   this.cartTotal = this.cartTotal - 15;  
+ } else if(this.cartTotal <= 75 && discount === 0){
+  alert("Your total mus be over £75.");
+ } else {
+  alert("Sorry, vouchers can only be used once.");
+ }
+ }
 
     this.clearCart = function(){
       cart.clear();
