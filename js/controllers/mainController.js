@@ -98,38 +98,34 @@ angular
       quantity: 5
     }];
 
-console.log(cart);
-
-
-    this.quantity;
     discount = 0;
+    this.quantity  = cart.stock();
     this.itemCount = cart.itemCount();
     this.cartTotal = cart.total();
-    this.cartList  = cart.showCart();
 
     this.addToCart = function(item){
-      //cart is in our 
       cart.add(item);
       this.itemCount = cart.itemCount(); 
       this.cartTotal = cart.total();
-      // this.cartList  = cart.itemList(); 
-      validate();
+      //decrease stock if it has more than 0
+      // if(this.quantity > 0){
+        // this.quantity = cart.stock() - 1; 
+      // }else{
+      //   alert("This item is sold out.");
+      // }
+     
     }
 
-    this.removeFromCart = function(item){
-      console.log(this.cartList)
-
-      console.log(cart.delete(item)); 
-      console.log(cart); 
+    this.removeFromCart = function(item){  
       cart.delete(item); 
-      this.cartTotal = cart.total();
+      this.cartTotal = cart.total() ;
       if(this.itemCount > 0){
         this.itemCount --;
       }
+      //if the stock is less than seed quantity, increase by 1
     }
 
     this.discount5 = function(cartTotal){
-     console.log("5 OFF");
      if(this.cartTotal > 5 && discount === 0){
        discount ++; 
        this.cartTotal = this.cartTotal - 5;  
@@ -141,7 +137,6 @@ console.log(cart);
   }  
 
   this.discount10 = function(cartTotal){
-    console.log("10 OFF");
     if(this.cartTotal > 50 && discount === 0){
       discount ++; 
       this.cartTotal = this.cartTotal - 10;  
@@ -153,23 +148,22 @@ console.log(cart);
  }
 
  function validate(item) {
-  console.log(this.cartList);
-  // var code = /footwear/gi;
+  //regex to validate if there is footwear present
+  var code = /footwear/gi;
 
-  // for(var i = 0; i<cart.length; i++){
-  //   var category = cart[i].category;
-  //   console.log(category.test(code));
-  //   return category.test(code);
-  //   }
-  // }
-  //     if(category.match(code)){
-  //       return true;
-  //     } else {return false;
+  for(var i = 0; i<cart.length; i++){
+    var category = cart[i].category;
+    category.test(code);
+    if(category.test(code) === true){
+      this.discount15;
+    }else{
+      alert("You must have at least 1 footwear item.")
     }
+  }  
+}
 
   this.discount15 = function(cartTotal){
-    console.log(cart);
-    console.log("15 OFF");
+
     if(this.cartTotal > 75 && discount === 0){
       discount ++; 
       this.cartTotal = this.cartTotal - 15;  

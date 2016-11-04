@@ -8,15 +8,14 @@ angular
     var cart = angular.fromJson($window.localStorage.getItem('cart') || []);
 
 
+
     return {
       add: function(item) {
         cart.push(item);
         window.localStorage.setItem('cart', angular.toJson(cart, 'pretty'));
-        console.log(cart);
       }, 
-      delete: function(item) {
+      delete: function(item) { 
         var index = cart.indexOf(item);
-        
         if(index > -1) {
           return cart.splice(index, 1);
         }
@@ -24,22 +23,9 @@ angular
       itemCount: function() {
         return cart.length;
       }, 
-      showCart: function() { 
-        console.log(cart);
-        return cart;
-      },
-      itemList: function() {
-        var list = JSON.parse(localStorage.getItem("cart"));
-        if(list> 0){
-          for(var i = 0; i < list.length; i++){
-            var category = [];
-            category.push(list[i].category);
-            return category;
-          }
-        }
-      },
-      stock: function() {
-
+      stock: function(item) {
+        //get index of item clicked
+        //quantity of item = stock
       },
       clear: function() {
         $window.localStorage.clear();
