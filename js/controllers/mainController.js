@@ -168,7 +168,7 @@ angular
       discount ++; 
       this.cartTotal = this.cartTotal - 15;  
     } else if(this.cartTotal <= 75 && discount === 0){
-      alert("Your total mus be over £75.");
+      alert("Your total must be over £75.");
     } else {
       alert("Sorry, vouchers can only be used once.");
     }
