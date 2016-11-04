@@ -1,10 +1,3 @@
-html {
-
-/*  height: 100%;
-  overflow: hidden;
-  width: 100%;*/
-}
-
 body {
   margin: 0 auto;
   font-family: 'Quicksand', sans-serif;
@@ -94,17 +87,12 @@ span#right {
   float: right;
 }
 
-
 span#left {
   float: left;
 }
 
 div.card {
   text-align: center;
-}
-
-ul{
-  list-style: none;
 }
 
 footer {
@@ -116,10 +104,59 @@ button.vouchers {
   font-size: 16px;
   font-weight: bold;
   color: grey;
-  /*color: #64997A;*/
 }
 
 button.vouchers:hover, button.vouchers:focus {
   color: black;
   outline: none;
+}
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { 
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  div.card-block{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }
+
+  h4.card-title {
+    font-size: 20px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  h5.card-subtitle.color {
+    font-size: 16px;
+    margin-top: -15px;
+    text-align: center;
+  }
+
+  h6.card-subtitle.color {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  img{
+    width: 225px;
+    height: 225px;
+  }
+
+  .fa-plus{
+    float: left;
+    margin-left: 15px;
+  }
+
+  .fa-minus{
+    float: right;
+    margin-right: 30px;
+  }
+
+ div.cart {
+  font-size: 18px;
+  margin-top: 15px;
+ }
+
 }

@@ -22,7 +22,6 @@ angular
         }
       },
       itemCount: function() {
-        console.log(cart);
         return cart.length;
       }, 
       showCart: function() { 
@@ -37,9 +36,7 @@ angular
             category.push(list[i].category);
             return category;
           }
-
         }
-       
       },
       stock: function() {
 
