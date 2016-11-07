@@ -17,15 +17,16 @@ angular
       delete: function(item) { 
         var index = cart.indexOf(item);
         if(index > -1) {
-          return cart.splice(index, 1);
+          return cart.splice(index, 1)[0];
         }
       },
       itemCount: function() {
         return cart.length;
       }, 
       stock: function(item) {
-        //get index of item clicked
-        //quantity of item = stock
+       console.log(cart.map(function(Obj,index){
+          return Obj.quantity;
+       }));
       },
       clear: function() {
         $window.localStorage.clear();

@@ -107,9 +107,10 @@ angular
       cart.add(item);
       this.itemCount = cart.itemCount(); 
       this.cartTotal = cart.total();
+      this.quantity--;
       //decrease stock if it has more than 0
       // if(this.quantity > 0){
-        // this.quantity = cart.stock() - 1; 
+      //   this.quantity = cart.stock() - 1; 
       // }else{
       //   alert("This item is sold out.");
       // }
