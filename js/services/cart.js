@@ -24,9 +24,9 @@ angular
         return cart.length;
       }, 
       stock: function(item) {
-       console.log(cart.map(function(Obj,index){
-          return Obj.quantity;
-       }));
+       return cart.map(function(Obj,index){
+         return Obj.quantity;
+       });
       },
       clear: function() {
         $window.localStorage.clear();
